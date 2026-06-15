@@ -1,0 +1,126 @@
+.formTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #0b0d17;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+.label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.input,
+.select,
+.textarea {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.9375rem;
+  font-family: inherit;
+  color: #1a1a1a;
+  background: #ffffff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  outline: none;
+  border-color: #1a5fb4;
+  box-shadow: 0 0 0 3px rgba(26, 95, 180, 0.15);
+}
+
+.textarea {
+  min-height: 88px;
+  resize: vertical;
+}
+
+.servicesLabel {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.8125rem;
+  color: #5c6370;
+  cursor: pointer;
+}
+
+.checkboxLabel input {
+  accent-color: #e31e24;
+  width: 15px;
+  height: 15px;
+}
+
+.submitBtn {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 1rem 1.5rem;
+  background: #e31e24;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.submitBtn:hover {
+  background: #c4191f;
+}
+
+.submitBtn:active {
+  transform: scale(0.99);
+}
+
+.successMsg {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  background: #ecfdf5;
+  border: 1px solid #6ee7b7;
+  border-radius: 6px;
+  color: #065f46;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 640px) {
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .servicesGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

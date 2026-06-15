@@ -1,0 +1,191 @@
+.toolsSection {
+  background: var(--bg-white);
+  padding: var(--section-padding);
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Marquee Wrapper */
+.marqueeWrapper {
+  margin-bottom: 2rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.marqueeWrapper:last-child {
+  margin-bottom: 0;
+}
+
+/* Add gradient overlays on edges */
+.marqueeWrapper::before,
+.marqueeWrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.marqueeWrapper::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg-white), transparent);
+}
+
+.marqueeWrapper::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg-white), transparent);
+}
+
+/* Marquee Container */
+.marquee {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+}
+
+/* Marquee Content - Right to Left Animation */
+.marqueeContent {
+  display: flex;
+  gap: 2rem;
+  animation: scrollRightToLeft 30s linear infinite;
+  will-change: transform;
+}
+
+/* Slower animation for row with fewer items */
+.marqueeWrapper:nth-child(2) .marqueeContent {
+  animation-duration: 20s;
+}
+
+/* Logo Card */
+.logoCard {
+  flex-shrink: 0;
+  background: var(--bg-white);
+  border-radius: 1rem;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-light);
+  min-width: 160px;
+  height: 100px;
+}
+
+.logoCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-red);
+}
+
+/* Logo Image */
+.logoImage {
+  width: auto !important;
+  height: auto !important;
+  max-width: 120px;
+  max-height: 60px;
+  object-fit: contain;
+}
+
+/* Right to Left Animation */
+@keyframes scrollRightToLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause animation on hover */
+.marqueeWrapper:hover .marqueeContent {
+  animation-play-state: paused;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .toolsSection {
+    padding: 3rem 1rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+  
+  .marqueeContent {
+    gap: 1rem;
+  }
+  
+  .logoCard {
+    padding: 1rem 1.5rem;
+    min-width: 130px;
+    height: 80px;
+  }
+  
+  .logoImage {
+    max-width: 100px;
+    max-height: 50px;
+  }
+  
+  .marqueeWrapper::before,
+  .marqueeWrapper::after {
+    width: 50px;
+  }
+}
+
+/* Decorative elements */
+.toolsSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+}
+
+.toolsSection::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+}

@@ -1,12 +1,56 @@
 :root {
+  /* Brand Colors */
+  --primary-red: #e31e24;
+  --primary-navy: #0b0d17;
+  --primary-white: #ffffff;
+  
+  /* Gradient Backgrounds */
+  --gradient-hero: linear-gradient(135deg, #e31e24 0%, #0b0d17 50%, #1d6fe8 100%);
+  --gradient-accent: linear-gradient(135deg, rgba(227, 30, 36, 0.9) 0%, rgba(11, 13, 23, 0.95) 100%);
+  --gradient-light: linear-gradient(135deg, #fff5f5 0%, #ffe8e9 100%);
+  
+  /* Text Colors */
+  --text-primary: #1a1a1a;
+  --text-secondary: #5c6370;
+  --text-muted: #64748b;
+  --text-light: rgba(255, 255, 255, 0.9);
+  
+  /* Background Colors */
+  --bg-white: #ffffff;
+  --bg-light-gray: #f8f9fa;
+  --bg-dark: #0b0d17;
+  --bg-overlay: rgba(11, 13, 23, 0.85);
+  
+  /* Border & Dividers */
+  --border-light: #e8eaed;
+  --border-medium: rgba(0, 0, 0, 0.1);
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
+  --shadow-glow: 0 0 24px rgba(227, 30, 36, 0.3);
+  
+  /* Layout */
   --background: #ffffff;
   --foreground: #171717;
+  --header-offset: 120px;
+  --font-inter: "Inter", system-ui, sans-serif;
+  --container-max: 1200px;
+  --section-padding: 5rem 1.5rem;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (max-width: 1024px) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --header-offset: 72px;
+    --section-padding: 4rem 1.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --header-offset: 64px;
+    --section-padding: 3rem 1rem;
   }
 }
 
@@ -26,9 +70,14 @@ body {
   flex-direction: column;
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.site-content {
+  flex: 1;
+  padding-top: var(--header-offset);
 }
 
 * {
@@ -42,8 +91,3 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}

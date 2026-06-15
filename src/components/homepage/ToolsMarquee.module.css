@@ -1,0 +1,196 @@
+/* ──────────────────────────────────────────
+   ToolsMarquee.module.css
+   Palette: near-black bg · electric-indigo accent · soft ivory text
+────────────────────────────────────────── */
+
+.section {
+  background-color: #0d0f14;
+  padding: 6rem 0 5rem;
+  overflow: hidden;
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ── Heading block ─────────────────────── */
+.headingWrapper {
+  text-align: center;
+  padding: 0 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #6c63ff;
+  margin-bottom: 0.75rem;
+}
+
+.heading {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 700;
+  color: #f0eee8;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 0;
+}
+
+/* ── Category pills ────────────────────── */
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.categoryPill {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #a09fb0;
+  border: 1px solid #2a2c3a;
+  border-radius: 999px;
+  padding: 0.3rem 0.85rem;
+  white-space: nowrap;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.categoryPill:hover {
+  border-color: #6c63ff;
+  color: #f0eee8;
+}
+
+/* ── Marquee shell ─────────────────────── */
+.marqueeWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Gradient fade edges */
+.fadeLeft,
+.fadeRight {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 12rem;
+  z-index: 2;
+}
+
+.fadeLeft {
+  left: 0;
+  background: linear-gradient(to right, #0d0f14 0%, transparent 100%);
+}
+
+.fadeRight {
+  right: 0;
+  background: linear-gradient(to left, #0d0f14 0%, transparent 100%);
+}
+
+/* ── Marquee track & inner ─────────────── */
+.marqueeTrack {
+  overflow: hidden;
+  width: 100%;
+}
+
+.marqueeInner {
+  display: flex;
+  width: max-content;
+  gap: 1rem;
+  /* Will be animated via row1 / row2 */
+}
+
+/* Row 1: standard scroll right → left */
+.row1 {
+  animation: scrollLeft 38s linear infinite;
+}
+
+/* Row 2: slightly slower, starts mid-way for visual offset */
+.row2 {
+  animation: scrollLeft 52s linear infinite;
+  animation-delay: -8s;
+}
+
+/* Pause on hover */
+.marqueeWrapper:hover .row1,
+.marqueeWrapper:hover .row2 {
+  animation-play-state: paused;
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .row1,
+  .row2 {
+    animation: none;
+  }
+}
+
+@keyframes scrollLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    /* Move exactly half — the duplicate set fills the gap */
+    transform: translateX(-50%);
+  }
+}
+
+/* ── Tool card ─────────────────────────── */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+  background: #13151d;
+  border: 1px solid #1f2130;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  min-width: 148px;
+  cursor: default;
+  transition: border-color 0.2s, background 0.2s, transform 0.2s;
+  will-change: transform;
+}
+
+.card:hover {
+  border-color: #6c63ff;
+  background: #181a26;
+  transform: translateY(-3px);
+}
+
+.cardIcon {
+  font-size: 1.4rem;
+  line-height: 1;
+  margin-bottom: 0.3rem;
+  filter: drop-shadow(0 0 6px rgba(108, 99, 255, 0.35));
+}
+
+.cardName {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #f0eee8;
+  white-space: nowrap;
+}
+
+.cardCategory {
+  font-size: 0.65rem;
+  font-weight: 400;
+  color: #5a5870;
+  white-space: nowrap;
+  letter-spacing: 0.03em;
+}
+
+/* ── Footer tagline ────────────────────── */
+.tagline {
+  max-width: 680px;
+  margin: 3.5rem auto 0;
+  padding: 0 1.5rem;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #706e82;
+}

@@ -1,0 +1,11 @@
+export { default as StatsSection } from "./StatsSection";
+export { default as ServicesSection } from "./ServicesSection";
+export { default as CTASection } from "./CTASection";
+export { default as CTASection2 } from "./CTASection2";
+export { default as CaseStudiesSection } from "./CaseStudiesSection";
+export { default as IndustriesSection } from "./IndustriesSection";
+export { default as ProcessSection } from "./ProcessSection";
+export { default as WhyChooseSection } from "./WhyChooseSection";
+export { default as GrowthEcosystemSection } from "./GrowthEcosystemSection";
+export { default as FAQ } from "./FAQ";
+export { default as ToolsPlatformsSection } from "./ToolsPlatformsSection";

@@ -1,0 +1,404 @@
+/* ============================================================
+   IndustriesSection.module.css
+   Theme: #e31e24 (red) | #000 (black) | #fff (white) | #1565c0 (blue)
+   ============================================================ */
+
+/* ---------- Section ---------- */
+.section {
+  background: #000;
+  padding: 64px 24px 72px;
+  font-family: var(--font-sans, system-ui, sans-serif);
+  overflow: hidden;
+  position: relative;
+}
+
+/* ---------- Header ---------- */
+.header {
+  max-width: 1200px;
+  margin: 0 auto 0;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: #e31e24;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  animation: slideIn 0.5s ease both;
+}
+
+.badge i {
+  font-size: 14px;
+  animation: spin 3s linear infinite;
+}
+
+.heroRow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: clamp(30px, 5vw, 52px);
+  font-weight: 700;
+  color: #000;
+  line-height: 1.1;
+  margin: 0;
+  animation: fadeUp 0.6s 0.1s ease both;
+}
+
+.titleRed {
+  color: #e31e24;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #000;
+  max-width: 340px;
+  line-height: 1.7;
+  margin: 0;
+  animation: fadeUp 0.6s 0.2s ease both;
+  padding-bottom: 4px;
+}
+
+/* ---------- Ticker ---------- */
+.tickerWrap {
+  overflow: hidden;
+  border-top: 1px solid #1a1a1a;
+  border-bottom: 1px solid #1a1a1a;
+  padding: 12px 0;
+  margin: 32px 0 40px;
+  background: #0a0a0a;
+}
+
+.tickerTrack {
+  display: flex;
+  width: max-content;
+  animation: ticker 24s linear infinite;
+}
+
+.tickerItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 28px;
+  white-space: nowrap;
+  font-size: 13px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.tickerItem i {
+  color: #e31e24;
+  font-size: 16px;
+}
+
+.tickerDot {
+  width: 4px;
+  height: 4px;
+  background: #e31e24;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+/* ---------- Grid ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 12px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ---------- Card ---------- */
+.card {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 14px;
+  padding: 22px 18px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  cursor: default;
+  opacity: 0;
+  animation: fadeUp 0.5s ease both;
+  transition: background 0.25s, border-color 0.25s, transform 0.25s;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.cardRed::before {
+  background: #e31e24;
+}
+
+.cardBlue::before {
+  background: #1565c0;
+}
+
+.card:hover {
+  background: #1a1a1a;
+  border-color: #2a2a2a;
+  transform: translateY(-4px);
+}
+
+.card:hover::before {
+  transform: scaleX(1);
+}
+
+/* ---------- Icon Box ---------- */
+.iconBox {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  flex-shrink: 0;
+  transition: background 0.25s;
+}
+
+.cardRed .iconBox {
+  background: rgba(227, 30, 36, 0.12);
+}
+
+.cardBlue .iconBox {
+  background: rgba(21, 101, 192, 0.12);
+}
+
+.cardRed .iconBox i {
+  color: #e31e24;
+  font-size: 22px;
+  transition: color 0.25s;
+}
+
+.cardBlue .iconBox i {
+  color: #1565c0;
+  font-size: 22px;
+  transition: color 0.25s;
+}
+
+.card:hover .iconBox {
+  background: #e31e24 !important;
+}
+
+.card:hover .iconBox i {
+  color: #fff !important;
+}
+
+/* ---------- Card Text ---------- */
+.cardName {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 6px;
+  line-height: 1.3;
+}
+
+.cardDesc {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ---------- Bottom Strip ---------- */
+.bottomStrip {
+  max-width: 1200px;
+  margin: 40px auto 0;
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 14px;
+  padding: 22px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  animation: fadeUp 0.6s 0.85s ease both;
+}
+
+.stripLeft {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.stripNum {
+  font-size: 36px;
+  font-weight: 700;
+  color: #e31e24;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.stripDivider {
+  width: 1px;
+  height: 52px;
+  background: #2a2a2a;
+  flex-shrink: 0;
+}
+
+.stripLabel {
+  font-size: 13px;
+  color: #777;
+  line-height: 1.5;
+  max-width: 220px;
+}
+
+.stripLabel strong {
+  display: block;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.stripCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #e31e24;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 12px 22px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: opacity 0.2s, transform 0.2s;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.stripCta:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.stripCta i {
+  font-size: 17px;
+}
+
+/* ---------- Animations ---------- */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 48px 16px 56px;
+  }
+
+  .heroRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .subtitle {
+    max-width: 100%;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 10px;
+  }
+
+  .bottomStrip {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .stripLeft {
+    gap: 12px;
+  }
+
+  .stripCta {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .stripNum {
+    font-size: 28px;
+  }
+
+  .stripDivider {
+    height: 40px;
+  }
+}
