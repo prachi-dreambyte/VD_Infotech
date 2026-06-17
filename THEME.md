@@ -7,7 +7,7 @@ This document outlines the unified design theme for the homepage. All components
 ## Brand Colors
 
 ### Primary Colors
-- **Brand Red**: `#e31e24` - Primary brand color used for CTAs, accents, and highlights
+- **Brand Red**: `#dd0a01` - Primary brand color used for CTAs, accents, and highlights
 - **Brand Navy**: `#0b0d17` - Deep navy blue for dark sections and contrast
 - **Brand White**: `#ffffff` - Clean white for backgrounds and text
 
@@ -56,7 +56,7 @@ This document outlines the unified design theme for the homepage. All components
 - **Overlay**: `rgba(11, 13, 23, 0.85)` - Dark overlays for hero sections
 
 ### Gradients
-- **Hero Gradient**: `linear-gradient(135deg, #e31e24 0%, #0b0d17 50%, #1d6fe8 100%)`
+- **Hero Gradient**: `linear-gradient(135deg, #dd0a01 0%, #0b0d17 50%, #1d6fe8 100%)`
 - **Accent Gradient**: `linear-gradient(135deg, rgba(227, 30, 36, 0.9) 0%, rgba(11, 13, 23, 0.95) 100%)`
 - **Light Gradient**: `linear-gradient(135deg, #fff5f5 0%, #ffe8e9 100%)`
 

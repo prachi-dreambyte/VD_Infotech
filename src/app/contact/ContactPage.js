@@ -15,7 +15,7 @@ const RESULTS = [
   {
     stat: "+343%",
     label: "Healthcare Practice",
-    bg: "linear-gradient(135deg, #e31e24 0%, #0d3d7a 100%)",
+    bg: "linear-gradient(135deg, #dd0a01 0%, #0d3d7a 100%)",
     labelVariant: "blue",
   },
   {

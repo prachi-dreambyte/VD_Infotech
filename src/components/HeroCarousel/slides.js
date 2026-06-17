@@ -6,7 +6,7 @@ export const heroSlides = [
     description:
       "Let’s look beyond generic traffic and meaningless clicks. We focus on what actually matters for your growth: the right audience, genuine trust, and scaling your business knowing your marketing investment is working for you.",
     bannerImage: "/assets/image/banners/12.png",
-    accent: "#e31e24",
+    accent: "#dd0a01",
   },
   {
     id: "banner-13",

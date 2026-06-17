@@ -1,6 +1,6 @@
 /* ============================================================
    ProcessSection.module.css
-   Palette: #e31e24 (red), #1d6fe8 (blue), #fff, #000
+   Palette: #dd0a01 (red), #1d6fe8 (blue), #fff, #000
    Background image + overlay, Lucide icons, fully responsive
    Mobile-first: vertical timeline → tablet 2-col → desktop strip
    ============================================================ */
@@ -59,7 +59,7 @@
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #e31e24;
+  color: #dd0a01;
   background: rgba(227,30,36,0.10);
   border: 1px solid rgba(227,30,36,0.30);
   padding: 0.3rem 0.9rem;
@@ -277,7 +277,7 @@
   width: 100%;
   min-height: 0;
   border-radius: 2px;
-  background: linear-gradient(to bottom, #e31e24, #ffffff, #1d6fe8);
+  background: linear-gradient(to bottom, #dd0a01, #ffffff, #1d6fe8);
   transition: height 0.5s ease;
 }
 

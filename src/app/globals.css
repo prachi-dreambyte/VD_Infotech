@@ -1,11 +1,11 @@
 :root {
   /* Brand Colors */
-  --primary-red: #e31e24;
+  --primary-red: #dd0a01;
   --primary-navy: #0b0d17;
   --primary-white: #ffffff;
   
   /* Gradient Backgrounds */
-  --gradient-hero: linear-gradient(135deg, #e31e24 0%, #0b0d17 50%, #1d6fe8 100%);
+  --gradient-hero: linear-gradient(135deg, #dd0a01 0%, #0b0d17 50%, #1d6fe8 100%);
   --gradient-accent: linear-gradient(135deg, rgba(227, 30, 36, 0.9) 0%, rgba(11, 13, 23, 0.95) 100%);
   --gradient-light: linear-gradient(135deg, #fff5f5 0%, #ffe8e9 100%);
   

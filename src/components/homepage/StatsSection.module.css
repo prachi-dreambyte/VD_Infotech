@@ -63,7 +63,7 @@
     position: relative;
     overflow: hidden;
     box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px #0000000f;
-    background: #e31e24;
+    background: #dd0a01;
     text-align: center;
 }
 
@@ -80,7 +80,7 @@
 .statValue {
   font-size: 3rem;
   font-weight: 700;
-  color: #FFDB58;
+  color:#fff;
   margin-bottom: 0.5rem;
   line-height: 1;
 }

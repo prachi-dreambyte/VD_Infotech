@@ -1,6 +1,6 @@
 /* ============================================================
    IndustriesSection.module.css
-   Theme: #e31e24 (red) | #000 (black) | #fff (white) | #1565c0 (blue)
+   Theme: #dd0a01 (red) | #000 (black) | #fff (white) | #1565c0 (blue)
    ============================================================ */
 
 /* ---------- Section ---------- */
@@ -22,7 +22,7 @@
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  background: #e31e24;
+  background: #dd0a01;
   color: #fff;
   font-size: 11px;
   font-weight: 600;
@@ -58,7 +58,7 @@
 }
 
 .titleRed {
-  color: #e31e24;
+  color: #dd0a01;
 }
 
 .subtitle {
@@ -99,14 +99,14 @@
 }
 
 .tickerItem i {
-  color: #e31e24;
+  color: #dd0a01;
   font-size: 16px;
 }
 
 .tickerDot {
   width: 4px;
   height: 4px;
-  background: #e31e24;
+  background: #dd0a01;
   border-radius: 50%;
   flex-shrink: 0;
   margin-left: 8px;
@@ -151,7 +151,7 @@
 }
 
 .cardRed::before {
-  background: #e31e24;
+  background: #dd0a01;
 }
 
 .cardBlue::before {
@@ -190,7 +190,7 @@
 }
 
 .cardRed .iconBox i {
-  color: #e31e24;
+  color: #dd0a01;
   font-size: 22px;
   transition: color 0.25s;
 }
@@ -202,7 +202,7 @@
 }
 
 .card:hover .iconBox {
-  background: #e31e24 !important;
+  background: #dd0a01 !important;
 }
 
 .card:hover .iconBox i {
@@ -250,7 +250,7 @@
 .stripNum {
   font-size: 36px;
   font-weight: 700;
-  color: #e31e24;
+  color: #dd0a01;
   line-height: 1;
   flex-shrink: 0;
 }
@@ -280,7 +280,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #e31e24;
+  background: #dd0a01;
   color: #fff;
   font-size: 13px;
   font-weight: 600;

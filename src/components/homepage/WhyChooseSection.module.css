@@ -83,11 +83,11 @@
 }
 /* 
 .tab:hover {
-  background: #e31e24b0;
+  background: #dd0a01b0;
 } */
 
 .tabActive {
-  background: #e31e24b0;
+  background: #dd0a01b0;
   border-color: #e2e8f0;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
 }

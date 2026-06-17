@@ -76,7 +76,7 @@
 }
 
 .checkboxLabel input {
-  accent-color: #e31e24;
+  accent-color: #dd0a01;
   width: 15px;
   height: 15px;
 }
@@ -85,7 +85,7 @@
   width: 100%;
   margin-top: 0.5rem;
   padding: 1rem 1.5rem;
-  background: #e31e24;
+  background: #dd0a01;
   color: #ffffff;
   border: none;
   border-radius: 6px;

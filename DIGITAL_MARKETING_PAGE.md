@@ -88,7 +88,7 @@ Successfully created a comprehensive Digital Marketing Services page for VD Info
 
 ### Theme Compliance
 ✅ Uses CSS variables from `globals.css`
-✅ Follows brand colors (Red #e31e24, Navy #0b0d17)
+✅ Follows brand colors (Red #dd0a01, Navy #0b0d17)
 ✅ Consistent spacing and container widths
 ✅ Matching shadow and border styles
 ✅ Proper hover effects and transitions
